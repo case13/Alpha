@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/09/07 20:07:08.000.277,=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/09/09 19:06:18.000.609,=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/09/09 19:07:09.000.180,C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.pas=F:\Microlins\Delphi\Alpha\View\uPrincipalView.pas</Transaction>
+    <Transaction>2023/09/09 19:07:09.000.180,C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.dfm=F:\Microlins\Delphi\Alpha\View\uPrincipalView.dfm</Transaction>
+    <Transaction>2023/09/09 19:07:24.000.395,C:\Users\User\Documents\Embarcadero\Studio\Projects\Project1.dproj=F:\Microlins\Delphi\Alpha\Alpha.dproj</Transaction>
+    <Transaction>2023/09/09 19:07:43.000.180,=F:\Microlins\Delphi\Alpha\DAO\uConexaoMySQL.pas</Transaction>
+    <Transaction>2023/09/09 19:08:35.000.307,=F:\Microlins\Delphi\Alpha\Unit1.pas</Transaction>
+    <Transaction>2023/09/09 19:10:02.000.820,F:\Microlins\Delphi\Alpha\Unit1.pas=F:\Microlins\Delphi\Alpha\DAO\EmpresaDAO.pas</Transaction>
+    <Transaction>2023/09/09 19:10:28.000.101,F:\Microlins\Delphi\Alpha\DAO\EmpresaDAO.pas=</Transaction>
+    <Transaction>2023/09/09 19:11:24.000.387,=F:\Microlins\Delphi\Alpha\DAO\uEmpresaDAO.pas</Transaction>
+    <Transaction>2023/09/09 19:11:52.000.912,=F:\Microlins\Delphi\Alpha\Unit1.pas</Transaction>
+    <Transaction>2023/09/09 19:13:01.000.530,F:\Microlins\Delphi\Alpha\Unit1.pas=F:\Microlins\Delphi\Alpha\Model\uEmpresaModel.pas</Transaction>
+    <Transaction>2023/09/09 19:13:56.000.538,=F:\Microlins\Delphi\Alpha\Unit1.pas</Transaction>
+    <Transaction>2023/09/09 19:14:25.000.139,F:\Microlins\Delphi\Alpha\Unit1.pas=F:\Microlins\Delphi\Alpha\Controller\uIEmpresaController.pas</Transaction>
+    <Transaction>2023/09/09 19:17:47.000.392,=F:\Microlins\Delphi\Alpha\Unit1.pas</Transaction>
+    <Transaction>2023/09/09 19:18:03.000.043,F:\Microlins\Delphi\Alpha\Unit1.pas=F:\Microlins\Delphi\Alpha\Controller\uEmpresaController.pas</Transaction>
+  </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Controller"/>
+    <File Path="Controller\uEmpresaController.pas"/>
+    <File Path="Controller\uIEmpresaController.pas"/>
+    <File Path="DAO"/>
+    <File Path="DAO\uConexaoMySQL.pas"/>
+    <File Path="DAO\uEmpresaDAO.pas"/>
+    <File Path="Model"/>
+    <File Path="Model\uEmpresaModel.pas"/>
+    <File Path="View"/>
+    <File Path="View\uPrincipalView.pas"/>
+    <File Path="View\uPrincipalView.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

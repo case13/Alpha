@@ -1,0 +1,50 @@
+unit uEmpresaController;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.Buttons,
+  FireDAC.Phys.FBDef, FireDAC.Phys.IBBase, FireDAC.Phys.FB,
+  Data.DBXJSON, REST.JSON, uEmpresaModel, uIEmpresaController;
+
+  type
+     TEmpresaController = class(TInterfacedObject, IEmpresaController)
+     public
+       function Incluir(Empresa : TEmpresaModel) : boolean;
+       function Alterar(Empresa : TEmpresaModel) : boolean;
+       function Deletar(Empresa : TEmpresaModel) : boolean;
+       function ObterEmpresaId(Id : integer) : TEmpresaModel;
+
+  end;
+
+implementation
+
+{ TEmpresaController }
+
+
+function TEmpresaController.Alterar(Empresa: TEmpresaModel): boolean;
+begin
+
+end;
+
+function TEmpresaController.Deletar(Empresa: TEmpresaModel): boolean;
+begin
+
+end;
+
+function TEmpresaController.Incluir(Empresa: TEmpresaModel): boolean;
+begin
+
+end;
+
+function TEmpresaController.ObterEmpresaId(Id: integer): TEmpresaModel;
+begin
+
+end;
+
+end.

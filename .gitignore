@@ -1,0 +1,10 @@
+/Fonte/__history
+/Fonte/__recovery
+/Fonte/Win32/Debug/*.exe
+/App/__history
+/Start/__history
+/Start/__recovery
+/Start/Win32/Debug/*.exe
+/Agente/Fonte/__recovery
+/Agente/Fonte/__history
+/Agente/Fonte/Win32/Debug/*.exe

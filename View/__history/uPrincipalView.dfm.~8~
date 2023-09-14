@@ -1,0 +1,58 @@
+object fPrincipalView: TfPrincipalView
+  Left = 0
+  Top = 0
+  Caption = 'Alpha Tecnology - Sistema de Escolas'
+  ClientHeight = 607
+  ClientWidth = 1031
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid1: TDBGrid
+    Left = 216
+    Top = 112
+    Width = 657
+    Height = 177
+    DataSource = DataSource1
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object Consultar: TBitBtn
+    Left = 216
+    Top = 304
+    Width = 113
+    Height = 33
+    Caption = 'Consultar'
+    TabOrder = 1
+    OnClick = ConsultarClick
+  end
+  object Edit1: TEdit
+    Left = 216
+    Top = 72
+    Width = 393
+    Height = 21
+    CharCase = ecUpperCase
+    TabOrder = 2
+  end
+  object DataSource1: TDataSource
+    DataSet = ClientDataSet1
+    Left = 152
+    Top = 152
+  end
+  object ClientDataSet1: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 152
+    Top = 216
+  end
+end
