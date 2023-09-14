@@ -1,0 +1,191 @@
+unit uEmpresaDAO;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.Buttons,
+  FireDAC.Phys.FBDef, FireDAC.Phys.IBBase, FireDAC.Phys.FB, uConexaoMySQL, System.JSON,
+  Data.DBXJSON, REST.JSON;
+
+
+  type
+
+   TEmpresaDAO = class
+     private
+       FConexaoMySQL : TConexaoMySQL;
+
+     public
+       constructor Create(Conexao: TConexaoMySQL);
+       function ConsultarEmpresasEmJSON: string;
+       function ConsultarEmpresaPorIdJSON(Id: Integer): TJSONObject;
+       function IncluirEmpresaJSON(EmpresaJSON: TJSONObject): Boolean;
+       function AlterarEmpresaJSON(EmpresaJSON: TJSONObject): Boolean;
+
+
+     end;
+
+implementation
+
+function TEmpresaDAO.AlterarEmpresaJSON(EmpresaJSON: TJSONObject): Boolean;
+var
+  Query: TFDQuery;
+  Id: Integer;
+begin
+  Query := TFDQuery.Create(nil);
+  try
+    Query := FConexaoMySQL.criarQuery;
+
+    // Verifique se o JSON contém o campo "Id"
+    if EmpresaJSON.TryGetValue<Integer>('Id', Id) then
+    begin
+      Query.SQL.Text :=
+        'UPDATE EMPRESA SET ' +
+        'CNPJ = :CNPJ, ' +
+        'RazaoSocial = :RazaoSocial, ' +
+        'NomeFantasia = :NomeFantasia, ' +
+        'Cabecalho = :Cabecalho, ' +
+        'Rodape = :Rodape, ' +
+        'EmpresaStatus = :EmpresaStatus ' +
+        'WHERE Id = :Id';
+
+      Query.ParamByName('Id').AsInteger := Id;
+      Query.ParamByName('CNPJ').AsString := EmpresaJSON.GetValue<string>('CNPJ', '');
+      Query.ParamByName('RazaoSocial').AsString := EmpresaJSON.GetValue<string>('RazaoSocial', '');
+      Query.ParamByName('NomeFantasia').AsString := EmpresaJSON.GetValue<string>('NomeFantasia', '');
+      Query.ParamByName('Cabecalho').AsString := EmpresaJSON.GetValue<string>('Cabecalho', '');
+      Query.ParamByName('Rodape').AsString := EmpresaJSON.GetValue<string>('Rodape', '');
+      Query.ParamByName('EmpresaStatus').AsString := EmpresaJSON.GetValue<string>('EmpresaStatus', '');
+
+      try
+        Query.ExecSQL;
+        Result := True;
+      except
+        Result := False;
+      end;
+    end
+    else
+    begin
+      Result := False; // Retorna False se o JSON não contiver o campo "Id"
+    end;
+  finally
+    Query.Free;
+  end;
+end;
+
+
+function TEmpresaDAO.IncluirEmpresaJSON(EmpresaJSON: TJSONObject): Boolean;
+var
+  Query: TFDQuery;
+begin
+  Query := TFDQuery.Create(nil);
+  try
+    Query := FConexaoMySQL.criarQuery;
+    Query.SQL.Text :=
+      'INSERT INTO EMPRESA (CNPJ, RazaoSocial, NomeFantasia, Cabecalho, Rodape, EmpresaStatus) ' +
+      'VALUES (:CNPJ, :RazaoSocial, :NomeFantasia, :Cabecalho, :Rodape, :EmpresaStatus)';
+
+    Query.ParamByName('CNPJ').AsString := EmpresaJSON.GetValue<string>('CNPJ', '');
+    Query.ParamByName('RazaoSocial').AsString := EmpresaJSON.GetValue<string>('RazaoSocial', '');
+    Query.ParamByName('NomeFantasia').AsString := EmpresaJSON.GetValue<string>('NomeFantasia', '');
+    Query.ParamByName('Cabecalho').AsString := EmpresaJSON.GetValue<string>('Cabecalho', '');
+    Query.ParamByName('Rodape').AsString := EmpresaJSON.GetValue<string>('Rodape', '');
+    Query.ParamByName('EmpresaStatus').AsString := EmpresaJSON.GetValue<string>('EmpresaStatus', '');
+
+    try
+      Query.ExecSQL;
+      Result := True;
+    except
+      Result := False;
+    end;
+  finally
+    Query.Free;
+  end;
+end;
+
+
+function TEmpresaDAO.ConsultarEmpresaPorIdJSON(Id: Integer): TJSONObject;
+var
+  Query: TFDQuery;
+begin
+  Query := TFDQuery.Create(nil);
+  try
+    Query := FConexaoMySQL.criarQuery;
+    Query.SQL.Text := 'SELECT * FROM EMPRESA WHERE Id = :Id';
+    Query.ParamByName('Id').AsInteger := Id;
+    Query.Open;
+
+    if not Query.IsEmpty then
+    begin
+      Result := TJSONObject.Create;
+      Result.AddPair('Id', Query.FieldByName('Id').AsString);
+      Result.AddPair('CNPJ', Query.FieldByName('CNPJ').AsString);
+      Result.AddPair('RazaoSocial', Query.FieldByName('RazaoSocial').AsString);
+      Result.AddPair('NomeFantasia', Query.FieldByName('NomeFantasia').AsString);
+      Result.AddPair('Cabecalho', Query.FieldByName('Cabecalho').AsString);
+      Result.AddPair('Rodape', Query.FieldByName('Rodape').AsString);
+      Result.AddPair('EmpresaStatus', Query.FieldByName('EmpresaStatus').AsString);
+    end
+    else
+    begin
+      Result := TJSONObject.Create; // Retorna um objeto JSON vazio se a empresa não for encontrada
+    end;
+  finally
+    Query.Free;
+  end;
+end;
+
+
+function TEmpresaDAO.ConsultarEmpresasEmJSON: string;
+var
+  Query: TFDQuery;
+  JSONArr: TJSONArray;
+  JSONObj: TJSONObject;
+begin
+  Query := TFDQuery.Create(nil);
+  JSONArr := TJSONArray.Create;
+  try
+    Query := FConexaoMySQL.criarQuery;
+    Query.SQL.Text := 'SELECT * FROM EMPRESA';
+    Query.Open;
+
+    while not Query.Eof do
+    begin
+      JSONObj := TJSONObject.Create;
+      JSONObj.AddPair('Id', Query.FieldByName('Id').AsString);
+      JSONObj.AddPair('CNPJ', Query.FieldByName('CNPJ').AsString);
+      JSONObj.AddPair('RazaoSocial', Query.FieldByName('RazaoSocial').AsString);
+      JSONObj.AddPair('NomeFantasia', Query.FieldByName('NomeFantasia').AsString);
+      JSONObj.AddPair('Cabecalho', Query.FieldByName('Cabecalho').AsString);
+      JSONObj.AddPair('Rodape', Query.FieldByName('Rodape').AsString);
+      JSONObj.AddPair('EmpresaStatus', Query.FieldByName('EmpresaStatus').AsString);
+      JSONArr.AddElement(JSONObj);
+      Query.Next;
+    end;
+
+    if JSONArr.Count > 0 then
+     begin
+       Result := JSONArr.ToJSON;
+     end
+    else
+     begin
+       Result := '[]';
+     end;
+  finally
+    Query.Free;
+    JSONArr.Free;
+  end;
+end;
+
+
+constructor TEmpresaDAO.Create(Conexao: TConexaoMySQL);
+begin
+  FConexaoMySQL := Conexao.Create;
+end;
+
+
+end.

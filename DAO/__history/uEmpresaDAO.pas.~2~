@@ -1,0 +1,79 @@
+unit uEmpresaDAO;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.Buttons,
+  FireDAC.Phys.FBDef, FireDAC.Phys.IBBase, FireDAC.Phys.FB, uConexaoMySQL, System.JSON,
+  Data.DBXJSON, REST.JSON;
+
+
+  type
+
+   TEmpresaDAO = class
+     private
+       FConexaoMySQL : TConexaoMySQL;
+
+     public
+       constructor Create(Conexao: TConexaoMySQL);
+       function ConsultarEmpresasEmJSON: string;
+
+     end;
+
+implementation
+
+
+function TEmpresaDAO.ConsultarEmpresasEmJSON: string;
+var
+  Query: TFDQuery;
+  JSONArr: TJSONArray;
+  JSONObj: TJSONObject;
+begin
+  Query := TFDQuery.Create(nil);
+  JSONArr := TJSONArray.Create;
+  try
+    Query := FConexaoMySQL.criarQuery;
+    Query.SQL.Text := 'SELECT * FROM EMPRESA';
+    Query.Open;
+
+    while not Query.Eof do
+    begin
+      JSONObj := TJSONObject.Create;
+      JSONObj.AddPair('Id', Query.FieldByName('Id').AsString);
+      JSONObj.AddPair('CNPJ', Query.FieldByName('CNPJ').AsString);
+      JSONObj.AddPair('RazaoSocial', Query.FieldByName('RazaoSocial').AsString);
+      JSONObj.AddPair('NomeFantasia', Query.FieldByName('NomeFantasia').AsString);
+      JSONObj.AddPair('Cabecalho', Query.FieldByName('Cabecalho').AsString);
+      JSONObj.AddPair('Rodape', Query.FieldByName('Rodape').AsString);
+      JSONObj.AddPair('EmpresaStatus', Query.FieldByName('EmpresaStatus').AsString);
+      JSONArr.AddElement(JSONObj);
+      Query.Next;
+    end;
+
+    if JSONArr.Count > 0 then
+     begin
+       Result := JSONArr.ToJSON;
+     end
+    else
+     begin
+       Result := '[]';
+     end;
+  finally
+    Query.Free;
+    JSONArr.Free;
+  end;
+end;
+
+
+constructor TEmpresaDAO.Create(Conexao: TConexaoMySQL);
+begin
+  FConexaoMySQL := Conexao.Create;
+end;
+
+
+end.

@@ -1,0 +1,59 @@
+unit uEmpresaModel;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.Buttons,
+  FireDAC.Phys.FBDef, FireDAC.Phys.IBBase, FireDAC.Phys.FB,
+  System.JSON, Data.DBXJSON, REST.JSON, uEmpresaDAO;
+type
+
+   TEmpresaModel = class
+     private
+       FId : integer;
+       FRazaoSocial : string;
+       FNomeFantasia : string;
+       FCabecalho : string;
+       FRodape : string;
+       FEmpresaStatus : string;
+
+     public
+       property Id: integer read FId write FId;
+       property RazaoSocial: string read FRazaoSocial write FRazaoSocial;
+       property NomeFantasia: string read FNomeFantasia write FNomeFantasia;
+       property Cabecalho: string read FCabecalho write FCabecalho;
+       property Rodape: string read FRodape write FRodape;
+       property EmpresaStatus: string read FEmpresaStatus write FEmpresaStatus;
+
+
+
+
+       function IncluirEmpresaJSON(EmpresaJSON: TJSONObject): Boolean;
+       function ConsultarEmpresaPorIdJSON(Id: Integer): TJSONObject;
+
+
+     end;
+
+
+implementation
+
+{ TEmpresaModel }
+
+
+function TEmpresaModel.ConsultarEmpresaPorIdJSON(Id: Integer): TJSONObject;
+begin
+ var DAO := TEmpresaDAO.Create(nil);
+ result := DAO.ConsultarEmpresaPorIdJSON(Id);
+end;
+
+function IncluirEmpresaJSON(EmpresaJSON: TJSONObject): Boolean;
+begin
+
+end;
+
+end.
