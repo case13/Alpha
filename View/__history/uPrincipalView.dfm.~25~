@@ -1,0 +1,534 @@
+object fPrincipalView: TfPrincipalView
+  Left = 0
+  Top = 0
+  Caption = 'Alpha Tecnology - Sistema de Escolas'
+  ClientHeight = 607
+  ClientWidth = 1894
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Square721 BT'
+  Font.Style = []
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  PixelsPerInch = 96
+  TextHeight = 14
+  object Panel1: TPanel
+    AlignWithMargins = True
+    Left = 3
+    Top = 3
+    Width = 1888
+    Height = 94
+    Align = alTop
+    BevelOuter = bvNone
+    TabOrder = 0
+    object pnFilial: TPanel
+      AlignWithMargins = True
+      Left = 3
+      Top = 3
+      Width = 306
+      Height = 88
+      Align = alLeft
+      BevelOuter = bvNone
+      Color = 12615680
+      ParentBackground = False
+      TabOrder = 0
+      OnMouseEnter = pnFilialMouseEnter
+      OnMouseLeave = pnFilialMouseLeave
+      object Panel3: TPanel
+        AlignWithMargins = True
+        Left = 5
+        Top = 5
+        Width = 296
+        Height = 78
+        Margins.Left = 5
+        Margins.Top = 5
+        Margins.Right = 5
+        Margins.Bottom = 5
+        Align = alClient
+        Color = 14408667
+        ParentBackground = False
+        TabOrder = 0
+        OnMouseEnter = pnFilialMouseEnter
+        OnMouseLeave = pnFilialMouseLeave
+        ExplicitLeft = 11
+        ExplicitTop = 18
+        ExplicitWidth = 286
+        ExplicitHeight = 68
+        object Image2: TImage
+          AlignWithMargins = True
+          Left = 6
+          Top = 6
+          Width = 75
+          Height = 66
+          Margins.Left = 5
+          Margins.Top = 5
+          Margins.Right = 5
+          Margins.Bottom = 5
+          Align = alLeft
+          Center = True
+          Picture.Data = {
+            0954506E67496D61676589504E470D0A1A0A0000000D494844520000001E0000
+            001E08060000003B30AEA2000000097048597300000B1300000B1301009A9C18
+            000001224944415478DA636480829229470CFE33FF1760A011F8F3E3CF858985
+            8E1F607C4618A376FEA9AB6A8AA2D2B4B0F4D98B8F0CAFDE7F0EE8CDB43D8061
+            71DDFCD33762834DD46961F189730F3E5EB8FE64905BBCF3C86D14CD2A72420C
+            CA72C2248B936C7171C7361483DC6C5419DC819854F1518B095A7CF7D15B1483
+            84F8B91804F93949161F3A168FBC381E308B07AC00A126181A413DF22C9EB6EC
+            048A41A6BA32604CAA38C91653130C0D1F8FBCC4356016E302F82CC005085AEC
+            E5A94FD0E2B649BB51F8B6E6CA40AC8457CFFDFB2FBF9EB9F0C007A7C5E6765A
+            042D9E39F7000ADFD85081C1C44801AF9EEF1FBFFE3C7EF2A6C7E0B218D485D1
+            D757502664F1852B4F5990F912E2BCFF2444F9FEE1D3F3E2F9FB3FF71FBDC21E
+            D4F4EEB401006509163DFCABA0B30000000049454E44AE426082}
+          OnMouseEnter = pnFilialMouseEnter
+          OnMouseLeave = pnFilialMouseLeave
+          ExplicitHeight = 67
+        end
+        object Label4: TLabel
+          Left = 93
+          Top = 16
+          Width = 139
+          Height = 20
+          Caption = 'Administrar Filiais'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -16
+          Font.Name = 'Square721 BT'
+          Font.Style = []
+          ParentFont = False
+          OnMouseEnter = pnFilialMouseEnter
+          OnMouseLeave = pnFilialMouseLeave
+        end
+        object Label5: TLabel
+          Left = 168
+          Top = 42
+          Width = 88
+          Height = 16
+          Cursor = crHandPoint
+          Caption = 'Novo Registro'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlue
+          Font.Height = -13
+          Font.Name = 'Square721 BT'
+          Font.Style = [fsUnderline]
+          ParentFont = False
+          OnMouseEnter = pnFilialMouseEnter
+          OnMouseLeave = pnFilialMouseLeave
+        end
+        object Label6: TLabel
+          Left = 93
+          Top = 42
+          Width = 60
+          Height = 16
+          Cursor = crHandPoint
+          Caption = 'Consultar'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlue
+          Font.Height = -13
+          Font.Name = 'Square721 BT'
+          Font.Style = [fsUnderline]
+          ParentFont = False
+          OnMouseEnter = pnFilialMouseEnter
+          OnMouseLeave = pnFilialMouseLeave
+        end
+      end
+    end
+    object pnAluno: TPanel
+      AlignWithMargins = True
+      Left = 627
+      Top = 3
+      Width = 306
+      Height = 88
+      Align = alLeft
+      BevelOuter = bvNone
+      Color = 12615680
+      ParentBackground = False
+      TabOrder = 1
+      OnMouseEnter = pnAlunoMouseEnter
+      OnMouseLeave = pnAlunoMouseLeave
+      ExplicitLeft = 879
+      ExplicitHeight = 96
+      object Panel4: TPanel
+        AlignWithMargins = True
+        Left = 5
+        Top = 5
+        Width = 296
+        Height = 78
+        Margins.Left = 5
+        Margins.Top = 5
+        Margins.Right = 5
+        Margins.Bottom = 5
+        Align = alClient
+        Color = 14408667
+        ParentBackground = False
+        TabOrder = 0
+        OnMouseEnter = pnAlunoMouseEnter
+        OnMouseLeave = pnAlunoMouseLeave
+        ExplicitLeft = 0
+        ExplicitTop = 26
+        ExplicitWidth = 286
+        ExplicitHeight = 82
+        object Image3: TImage
+          AlignWithMargins = True
+          Left = 6
+          Top = 6
+          Width = 75
+          Height = 66
+          Margins.Left = 5
+          Margins.Top = 5
+          Margins.Right = 5
+          Margins.Bottom = 5
+          Align = alLeft
+          Center = True
+          Picture.Data = {
+            0954506E67496D61676589504E470D0A1A0A0000000D494844520000001E0000
+            001E08060000003B30AEA2000000097048597300000B1300000B1301009A9C18
+            0000040A4944415478DAED955B4C1C551CC6FF73DF819DEDBA2D9785054A4AB9
+            2822DA3ED8074DFBA0C606696A6C134D0DB1988260114553D098CDC672B1172D
+            8B69056B22B14123694C1B055313B1BE34B12F265652B484225D76865D6EBBB3
+            BBB3B373F1CC224D6B2961A9DBBEF47B396766CEF97EE77CE77F3218DC2361F7
+            C1F7C14BA9B6E9703A919AF2BED15743E10F3E3DFACE5452C1AFBEE7CE371144
+            1B41915B33ED8E340C74DCCB4F4EABAA3A24C9B103275B1BC6FE577075CBB132
+            96A60E1124B9D99EEDB0ADB1DA6E9A270683E09D9C988946A42BB21C7BFDB38E
+            C68B7704AE6D713F41D0E46186663666E7E5DA5252CCCB9A45C2616301D32151
+            F4A98ADCDCDDF6D69915839D4E273EA5AEADC470BCDD6CE650A2395693894DE4
+            44408E46819FF4CCCD07E66641550EFA46ECBDFDFDBBD525C1BB9C4E7ACBBCA7
+            77D4F2E8E316AB752D8A94A328FAFA4025168348241C6F5555015DD3170C700C
+            08820492A2806553E2ED8D7304811767FDBE790DB4AE30E6EFEC75B9A4F8BC3A
+            E727467E0DA063F565E2C54C654B356E181992221198F10B0818019661C062E1
+            C0C498903901D4BF80183257622A48510902E8AC23928416900AB6B474584C4A
+            D334F04FF1928FE703AAAE7D19C69583D8BE968FEA719C6CB36739E85CCF3993
+            B4B92A3E388A0C2627C6A0F4A112B0705C42510782225CFA6318B272F2813199
+            E2EF7404F70982E49DBC266B9AF26E3CEAFDFB3B19CD865795CC5EE8E40B76C4
+            32EC599C140A83AE44A070634142D0458DFC350A386902363515FC3E41F40BC2
+            ACAAC74EA898A9B3C75513BEA9B87A5F7B76E8D775CFB801A35B599675A4AD7B
+            802B2A5C2DF80A4CCFCC8BA19028A09AE8C82066BE70B95CCA2DC5B508AE3A31
+            B8CDE8D736BB1BD6E7671F2D2E2E2257031EBE3CA25DBDFAB7B3A7BDB11561F4
+            FF7EBF2DB8E6C0C75BF337E47D5B5C5468359EE5A80C015184286A150555B6B2
+            703B08920092A4806168B098CD40330B37E1F2C89F7363A3E33BBB3F7CF3E7A5
+            16B62C382B27EB2C45129C979F42C0E88A76CAA0EACFCCC840572E16F44C782B
+            1307371FDBAE61DA771860ABFA91E8A0EBB88E577477340E2404362A5D4A557B
+            10F645348C5A09EC06AA8C9CBF6244BCA6ABEB8D25A3BA2D7851756F1FCA9429
+            EA391CA01CEDA2144D7160BACEE91858E2063A04740C0B22DA3594CE250DE037
+            1DB0B39FB7370ACBAD2D0E3EB9B792B3D8E81F491C2B5735AD6FD791D37B5713
+            6F228A83BF6ED8D1B469D3C31D051BD69343BF5C98F28C7BB6BDDCFDC370D2C1
+            A7EA2B5E7AA4FCC1EED29242F3E0B9F35EC13FFDD82BC707F8A4838DA8D3D2D9
+            91A79F7AD2FEFDE04FBFBF70E4745932A1D7C186BE697ABE6F8DC5B2D3373D5B
+            BDC77DA6EFAE817BF755E4120C9CA779B660777FBF7A27A609810D9DAADB9EB7
+            E7F8C078B2A1B780EFA6EE19F81F2941BA834413FCBF0000000049454E44AE42
+            6082}
+          OnMouseEnter = pnAlunoMouseEnter
+          OnMouseLeave = pnAlunoMouseLeave
+          ExplicitHeight = 67
+        end
+        object Label7: TLabel
+          Left = 93
+          Top = 16
+          Width = 149
+          Height = 20
+          Caption = 'Alunos Registradas'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -16
+          Font.Name = 'Square721 BT'
+          Font.Style = []
+          ParentFont = False
+          OnMouseEnter = pnAlunoMouseEnter
+          OnMouseLeave = pnAlunoMouseLeave
+        end
+        object Label8: TLabel
+          Left = 168
+          Top = 42
+          Width = 88
+          Height = 16
+          Cursor = crHandPoint
+          Caption = 'Novo Registro'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlue
+          Font.Height = -13
+          Font.Name = 'Square721 BT'
+          Font.Style = [fsUnderline]
+          ParentFont = False
+          OnMouseEnter = pnAlunoMouseEnter
+          OnMouseLeave = pnAlunoMouseLeave
+        end
+        object Label9: TLabel
+          Left = 93
+          Top = 42
+          Width = 60
+          Height = 16
+          Cursor = crHandPoint
+          Caption = 'Consultar'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlue
+          Font.Height = -13
+          Font.Name = 'Square721 BT'
+          Font.Style = [fsUnderline]
+          ParentFont = False
+          OnMouseEnter = pnAlunoMouseEnter
+          OnMouseLeave = pnAlunoMouseLeave
+        end
+      end
+    end
+    object pnEscola: TPanel
+      AlignWithMargins = True
+      Left = 315
+      Top = 3
+      Width = 306
+      Height = 88
+      Align = alLeft
+      BevelOuter = bvNone
+      Color = 12615680
+      ParentBackground = False
+      TabOrder = 2
+      OnMouseEnter = pnEscolaMouseEnter
+      OnMouseLeave = pnEscolaMouseLeave
+      ExplicitLeft = 291
+      object Panel5: TPanel
+        AlignWithMargins = True
+        Left = 5
+        Top = 5
+        Width = 296
+        Height = 78
+        Margins.Left = 5
+        Margins.Top = 5
+        Margins.Right = 5
+        Margins.Bottom = 5
+        Align = alClient
+        Color = 14408667
+        ParentBackground = False
+        TabOrder = 0
+        OnMouseEnter = pnEscolaMouseEnter
+        OnMouseLeave = pnEscolaMouseLeave
+        ExplicitLeft = 11
+        ExplicitTop = 18
+        ExplicitWidth = 286
+        ExplicitHeight = 68
+        object Image4: TImage
+          AlignWithMargins = True
+          Left = 6
+          Top = 6
+          Width = 75
+          Height = 66
+          Margins.Left = 5
+          Margins.Top = 5
+          Margins.Right = 5
+          Margins.Bottom = 5
+          Align = alLeft
+          Center = True
+          Picture.Data = {
+            0954506E67496D61676589504E470D0A1A0A0000000D494844520000001E0000
+            001E08060000003B30AEA2000000097048597300000B1300000B1301009A9C18
+            000004414944415478DAED975B4C1C5518C7BF3397DD996167BBB0B0AC5C76B1
+            08065B53EB35A6B5D0D0876A9A0A620D69B42A26A63CF8A03E3471630831F6CD
+            F4B13E54AD625A2325ADD28BA93C406D6C684D0C36817AA1975996DB5E607766
+            2F733D9E5DAB0164038BD107C3974CCECE9CF9CEEFFF7DE74CBE6F11ACD1861B
+            1BBDD9F189A1A1E9B5F8A342619420EC4734FD0ACBF365D9677A3A1DC6A679DC
+            4AA54E14226245F07073B31B6CB65696A25E0396BDD75D55555C525D6D636CB6
+            DCBCA1EB109F9E3662C160444BA763D8303E530DA367FBC0C064C1E0A591B9AB
+            ABDD1BBC5E9661D9DCBC655990989DC5D9DF4E8F075114B550841E0D06A32B65
+            022D84219E6FA768FA004360A53E5F1981D997C262921449CBB26C61DC4B9E19
+            0C453DCF89A2A3D4EFF78A1E0FBD48C4D494119D9888EA994C9864E2938522D0
+            E59D3B6BED45457D369E2FCF17595492C299444226F7BDA6AE7FFCE4C0C0AF0B
+            D55FD9B5AB8E66D90E02DDC7399DA29B88CE9709B21D336A32D986AE34373779
+            6A6B4F573434B896469691E58489F12953553F5A0ACB67591188655FCE9789C9
+            B1B1F9D9F1F1D61CB8B4A6E68CA3B4D4B956582122E4484489DCBEDD9203530C
+            F33942E80BDDB28E6DBB78F1C63F81E515D1D858C30AC24B18A117754D7B1D91
+            A389C809CB9DD0AEAE2E4A137C4F399D7C2711F208B93886A619329A9A6E1880
+            F04D2599FA3089C5FE236FBF90CEFABCF9C197BC00C93D62117F90B3DBEB5D2E
+            870D0162D2AAAA29E465DD30AFCECBC9A39C12BCDCDDDD6D657DEE32FFB0C091
+            E33B1CBCFDD8A6FBFC650F6FAE735578DC6476F1D7168BCB3032FA5BF2EAF55F
+            E2BA661C26F3A8C42506B63DFE90BBA4C4C55A7899503186C9E999F4F7D77E9A
+            9C8F275E7DEFAD8EEF167D4E878F9E187DE3404B8343E0574C9B619A707E7038
+            5E5E5E66AFF07A39BCA2070045483DBD67C7DEE9DCFFC05FE07D5DDF946C299F
+            FB31D0D9EE2B64DFA4885CD03EF7F49E9346668AB7F676EF8EA12CD4A2E8EB5B
+            3C89F2770F3E47FF9BE04F4F7D6B8ECC3AA73369F541B4377076476545D5577E
+            2EE83AD4B1A7A0850A059FFC7A08EEA85573A150A8053D1BE86FAAACF49DF6D9
+            A5FF042CA9BEF950486A5D07AF83D7C1FF63F01CA9447125059AA69326938522
+            DE0E6E9713FEEC24960367674C6CE5BA18D27290C2408305786570FBEEC760F0
+            DA0D9889CC03B28900AC4016A28141A48C9A19B034051C3C0BDBB7D6C1E6FA1A
+            98882AA49FD26064EC16DC0A85C1A204008603C3A280462669BA9360432A6CAA
+            F343FDC66A38D97FE9EFE07B18C9C572C4D1510B34EFCA9B2E4B4B0156EE00A3
+            85A1788308E1941D90E807CA56B4ECFBD978CD740C50E226E87A0AA674FF5DF0
+            A10B35BCC8FDB0D15FE1468C7D557BC5300C081C932BF229D504833427AB316C
+            A8302E4D45E494F268AE1EB7755D6822DD4A1B85815DD50208DFEF101CB982AE
+            A4945184D1CFABF1B310E884DED7D7FDF46041FF9D165A4BE07C6D763CF3FE33
+            E36BF1FF1DBA25B904CD3E835E0000000049454E44AE426082}
+          OnMouseEnter = pnEscolaMouseEnter
+          OnMouseLeave = pnEscolaMouseLeave
+          ExplicitHeight = 67
+        end
+        object Label10: TLabel
+          Left = 93
+          Top = 16
+          Width = 157
+          Height = 20
+          Caption = 'Escolas Registradas'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -16
+          Font.Name = 'Square721 BT'
+          Font.Style = []
+          ParentFont = False
+          OnMouseEnter = pnEscolaMouseEnter
+          OnMouseLeave = pnEscolaMouseLeave
+        end
+        object Label11: TLabel
+          Left = 168
+          Top = 42
+          Width = 88
+          Height = 16
+          Cursor = crHandPoint
+          Caption = 'Novo Registro'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlue
+          Font.Height = -13
+          Font.Name = 'Square721 BT'
+          Font.Style = [fsUnderline]
+          ParentFont = False
+          OnMouseEnter = pnEscolaMouseEnter
+          OnMouseLeave = pnEscolaMouseLeave
+        end
+        object Label12: TLabel
+          Left = 93
+          Top = 42
+          Width = 60
+          Height = 16
+          Cursor = crHandPoint
+          Caption = 'Consultar'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlue
+          Font.Height = -13
+          Font.Name = 'Square721 BT'
+          Font.Style = [fsUnderline]
+          ParentFont = False
+          OnMouseEnter = pnEscolaMouseEnter
+          OnMouseLeave = pnEscolaMouseLeave
+        end
+      end
+    end
+    object pnAcao: TPanel
+      AlignWithMargins = True
+      Left = 939
+      Top = 3
+      Width = 306
+      Height = 88
+      Align = alLeft
+      BevelOuter = bvNone
+      Color = 12615680
+      ParentBackground = False
+      TabOrder = 3
+      OnMouseEnter = pnAcaoMouseEnter
+      OnMouseLeave = pnAcaoMouseLeave
+      ExplicitLeft = 879
+      ExplicitHeight = 96
+      object Panel9: TPanel
+        AlignWithMargins = True
+        Left = 5
+        Top = 5
+        Width = 296
+        Height = 78
+        Margins.Left = 5
+        Margins.Top = 5
+        Margins.Right = 5
+        Margins.Bottom = 5
+        Align = alClient
+        Color = 14408667
+        ParentBackground = False
+        TabOrder = 0
+        OnMouseEnter = pnAcaoMouseEnter
+        OnMouseLeave = pnAcaoMouseLeave
+        object Image6: TImage
+          AlignWithMargins = True
+          Left = 6
+          Top = 6
+          Width = 75
+          Height = 66
+          Margins.Left = 5
+          Margins.Top = 5
+          Margins.Right = 5
+          Margins.Bottom = 5
+          Align = alLeft
+          Center = True
+          Picture.Data = {
+            0954506E67496D61676589504E470D0A1A0A0000000D494844520000001E0000
+            001E08060000003B30AEA2000000097048597300000B1300000B1301009A9C18
+            000002B04944415478DAE5966F48137118C7BFE76CEDDACCE9CCB9C5DC32C2B4
+            962EAC66100DA4C80C2D427D6B6F832033F465F6AA4C42227A3D5F661186B209
+            853089544A5273697F489C9273C6D696CDDBE6DC753B39D98839D76E28F8BCF9
+            DDF3DCFD7E9FDFF3FCEEEEF912D82223761EF85E8B51931EC4552E10A289F934
+            82B6F30961D654306B2A393F988E17C483DBC69B0491D6C105156A3925934B03
+            7C829D0EB7D06E73909C4FD3A1C628B088DC8D2BD72A9951C86B597D941FDDC6
+            3E660CFC0B0E43CF56E9A154CB798572366F7360C034CC6E8205B73777D629F2
+            F33A0D55E56464A64BBFBDF8FE692629D8C1231A64EC1547641EC08079906236
+            D140B437190D47F5452F4F9C29C98C9CB430B788BE6796A4C0957506E4A972A3
+            62EFDF8C7BACC353976382536571C1A928F5A6C0015F00AE9FEEA4C0D9FBA410
+            8AA2BF90ED5BEA6D095E1E7D87A5FE3EF65A525109B1EE64EAC14B9657F0F59B
+            B0BFE000EBFF989E0659710912C3F9D4826DCDD75154AA0541AC35369AA63135
+            6E85BAED49EAC0E3334E081FB6A0EC7459547C6470042B4D6D38A691F10FFE68
+            73E1E9DB19D47EED814E2E82582A65E35EB71BA30E1F9E17D6A0F6940ABA821C
+            FEC0E14CBB86665170E830489F07A53DF72111B05D06DE900063D52DA0449998
+            FEF619F5E5F928D920F34D832718E863D304B233993F10918EC2E262FC723A21
+            9A9F02CDDCF72B8B902593E1CBE424B393205C1E2F6E5469A18D01FFAF336EED
+            FA808C1C05829E45DCAA09BF60C0A35E2BE83D32FC7139D05A7F3C81335E6F8B
+            7A32DC9337B2BB0C98140AD058ADC52E411A1B5B590DA1A37702947F1577E280
+            7DCB7E58CCC3947D76A121420808192150BEA110308FD8704EA75A87721686BF
+            1E9DC3C53275CCB96B426088EDC931A4CF05C4CB3C510B67DADD1943FA700F29
+            35B954766E56EAC5DE96C95B5E6B9A80ED3CF05FD102A8FA02CC8BC000000000
+            49454E44AE426082}
+          OnMouseEnter = pnAcaoMouseEnter
+          OnMouseLeave = pnAcaoMouseLeave
+          ExplicitHeight = 67
+        end
+        object Label16: TLabel
+          Left = 93
+          Top = 16
+          Width = 145
+          Height = 20
+          Caption = 'A'#231#245'es Registradas'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -16
+          Font.Name = 'Square721 BT'
+          Font.Style = []
+          ParentFont = False
+          OnMouseEnter = pnAcaoMouseEnter
+          OnMouseLeave = pnAcaoMouseLeave
+        end
+        object Label17: TLabel
+          Left = 168
+          Top = 42
+          Width = 88
+          Height = 16
+          Cursor = crHandPoint
+          Caption = 'Novo Registro'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlue
+          Font.Height = -13
+          Font.Name = 'Square721 BT'
+          Font.Style = [fsUnderline]
+          ParentFont = False
+          OnMouseEnter = pnAcaoMouseEnter
+          OnMouseLeave = pnAcaoMouseLeave
+        end
+        object Label18: TLabel
+          Left = 93
+          Top = 42
+          Width = 60
+          Height = 16
+          Cursor = crHandPoint
+          Caption = 'Consultar'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlue
+          Font.Height = -13
+          Font.Name = 'Square721 BT'
+          Font.Style = [fsUnderline]
+          ParentFont = False
+          OnMouseEnter = pnAcaoMouseEnter
+          OnMouseLeave = pnAcaoMouseLeave
+        end
+      end
+    end
+  end
+end

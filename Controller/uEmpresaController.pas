@@ -20,6 +20,9 @@ uses
        function ConsultarIdJSON(Id : integer) : TJSONObject;
        function ConsultarEmpresaLikeJSON(filtro: string): TJSONObject;
 
+       function GetId : integer;
+       procedure SetId(const value : integer);
+
   end;
 
 implementation
@@ -43,6 +46,18 @@ function TEmpresaController.IncluirEmpresaJSON(EmpresaJSON: TJSONObject): string
 begin
  var Model := TEmpresaModel.Create;
  result := model.IncluirEmpresaJSON(EmpresaJSON);
+end;
+
+function TEmpresaController.GetId: integer;
+begin
+  var Model := TEmpresaModel.Create;
+  result := Model.Id;
+end;
+
+procedure TEmpresaController.SetId(const value: integer);
+begin
+  var Model := TEmpresaModel.Create;
+  Model.Id := value;
 end;
 
 function TEmpresaController.AlterarEmpresaJSON(EmpresaJSON: TJSONObject): string;

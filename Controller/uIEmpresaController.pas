@@ -19,6 +19,10 @@ type
    function ConsultarIdJSON(Id : integer) : TJSONObject;
    function ConsultarEmpresaLikeJSON(filtro: string): TJSONObject;
 
+
+   function GetId : integer;
+   procedure SetId(const values : integer);
+
  end;
 
 implementation

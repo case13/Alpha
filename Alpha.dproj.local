@@ -3,31 +3,64 @@
 	<Transactions>
     <Transaction>2023/09/07 20:07:08.000.277,=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2023/09/09 19:06:18.000.609,=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2023/09/09 19:07:09.000.180,C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.pas=F:\Microlins\Delphi\Alpha\View\uPrincipalView.pas</Transaction>
-    <Transaction>2023/09/09 19:07:09.000.180,C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.dfm=F:\Microlins\Delphi\Alpha\View\uPrincipalView.dfm</Transaction>
-    <Transaction>2023/09/09 19:07:24.000.395,C:\Users\User\Documents\Embarcadero\Studio\Projects\Project1.dproj=F:\Microlins\Delphi\Alpha\Alpha.dproj</Transaction>
+    <Transaction>2023/09/09 19:07:09.000.180,F:\Microlins\Delphi\Alpha\View\uPrincipalView.dfm=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/09/09 19:07:09.000.180,F:\Microlins\Delphi\Alpha\View\uPrincipalView.pas=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/09/09 19:07:24.000.395,F:\Microlins\Delphi\Alpha\Alpha.dproj=C:\Users\User\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
     <Transaction>2023/09/09 19:07:43.000.180,=F:\Microlins\Delphi\Alpha\DAO\uConexaoMySQL.pas</Transaction>
     <Transaction>2023/09/09 19:08:35.000.307,=F:\Microlins\Delphi\Alpha\Unit1.pas</Transaction>
-    <Transaction>2023/09/09 19:10:02.000.820,F:\Microlins\Delphi\Alpha\Unit1.pas=F:\Microlins\Delphi\Alpha\DAO\EmpresaDAO.pas</Transaction>
+    <Transaction>2023/09/09 19:10:02.000.820,F:\Microlins\Delphi\Alpha\DAO\EmpresaDAO.pas=F:\Microlins\Delphi\Alpha\Unit1.pas</Transaction>
     <Transaction>2023/09/09 19:10:28.000.101,F:\Microlins\Delphi\Alpha\DAO\EmpresaDAO.pas=</Transaction>
     <Transaction>2023/09/09 19:11:24.000.387,=F:\Microlins\Delphi\Alpha\DAO\uEmpresaDAO.pas</Transaction>
     <Transaction>2023/09/09 19:11:52.000.912,=F:\Microlins\Delphi\Alpha\Unit1.pas</Transaction>
-    <Transaction>2023/09/09 19:13:01.000.530,F:\Microlins\Delphi\Alpha\Unit1.pas=F:\Microlins\Delphi\Alpha\Model\uEmpresaModel.pas</Transaction>
+    <Transaction>2023/09/09 19:13:01.000.530,F:\Microlins\Delphi\Alpha\Model\uEmpresaModel.pas=F:\Microlins\Delphi\Alpha\Unit1.pas</Transaction>
     <Transaction>2023/09/09 19:13:56.000.538,=F:\Microlins\Delphi\Alpha\Unit1.pas</Transaction>
-    <Transaction>2023/09/09 19:14:25.000.139,F:\Microlins\Delphi\Alpha\Unit1.pas=F:\Microlins\Delphi\Alpha\Controller\uIEmpresaController.pas</Transaction>
+    <Transaction>2023/09/09 19:14:25.000.139,F:\Microlins\Delphi\Alpha\Controller\uIEmpresaController.pas=F:\Microlins\Delphi\Alpha\Unit1.pas</Transaction>
     <Transaction>2023/09/09 19:17:47.000.392,=F:\Microlins\Delphi\Alpha\Unit1.pas</Transaction>
-    <Transaction>2023/09/09 19:18:03.000.043,F:\Microlins\Delphi\Alpha\Unit1.pas=F:\Microlins\Delphi\Alpha\Controller\uEmpresaController.pas</Transaction>
-  </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
+    <Transaction>2023/09/09 19:18:03.000.043,F:\Microlins\Delphi\Alpha\Controller\uEmpresaController.pas=F:\Microlins\Delphi\Alpha\Unit1.pas</Transaction>
+    <Transaction>2023/09/14 19:15:58.000.414,=F:\Microlins\Projetos\Delphi\Alpha\Unit1.pas</Transaction>
+    <Transaction>2023/09/14 19:22:04.000.178,F:\Microlins\Projetos\Delphi\Alpha\DAO\uFilialDAO.pas=F:\Microlins\Projetos\Delphi\Alpha\Unit1.pas</Transaction>
+    <Transaction>2023/09/16 10:14:18.000.083,=F:\Microlins\Projetos\Delphi\Alpha\Unit1.pas</Transaction>
+    <Transaction>2023/09/16 10:21:06.000.386,F:\Microlins\Projetos\Delphi\Alpha\Model\uFilialModel.pas=F:\Microlins\Projetos\Delphi\Alpha\Unit1.pas</Transaction>
+    <Transaction>2023/09/16 12:01:35.000.052,=F:\Microlins\Projetos\Delphi\Alpha\Unit1.pas</Transaction>
+    <Transaction>2023/09/16 12:07:59.000.412,F:\Microlins\Projetos\Delphi\Alpha\Unit1.pas=F:\Microlins\Projetos\Delphi\Alpha\Shared\uUtilitarios.pas</Transaction>
+    <Transaction>2023/09/20 09:56:59.000.876,=F:\Microlins\Projetos\Delphi\Alpha\Unit1.pas</Transaction>
+    <Transaction>2023/09/20 09:59:51.000.397,F:\Microlins\Projetos\Delphi\Alpha\Controller\uIFilialController.pas=F:\Microlins\Projetos\Delphi\Alpha\Unit1.pas</Transaction>
+    <Transaction>2023/09/20 10:00:14.000.316,=F:\Microlins\Projetos\Delphi\Alpha\Unit1.pas</Transaction>
+    <Transaction>2023/09/20 10:01:57.000.084,F:\Microlins\Projetos\Delphi\Alpha\Controller\uFilialController.pas=F:\Microlins\Projetos\Delphi\Alpha\Unit1.pas</Transaction>
+    <Transaction>2023/09/25 16:46:52.000.464,=F:\Microlins\Projetos\Delphi\Alpha\Unit1.pas</Transaction>
+    <Transaction>2023/09/25 16:53:44.000.858,F:\Microlins\Projetos\Delphi\Alpha\Unit1.dfm=F:\Microlins\Projetos\Delphi\Alpha\View\uFilialViewCons.dfm</Transaction>
+    <Transaction>2023/09/25 16:53:44.000.858,F:\Microlins\Projetos\Delphi\Alpha\Unit1.pas=F:\Microlins\Projetos\Delphi\Alpha\View\uFilialViewCons.pas</Transaction>
+    <Transaction>2023/10/02 21:26:16.000.362,=F:\Microlins\Projetos\Delphi\Alpha\Unit1.pas</Transaction>
+    <Transaction>2023/10/02 21:27:07.000.036,F:\Microlins\Projetos\Delphi\Alpha\View\uFilialViewAdd.dfm=F:\Microlins\Projetos\Delphi\Alpha\Unit1.dfm</Transaction>
+    <Transaction>2023/10/02 21:27:07.000.036,F:\Microlins\Projetos\Delphi\Alpha\View\uFilialViewAdd.pas=F:\Microlins\Projetos\Delphi\Alpha\Unit1.pas</Transaction>
+    <Transaction>2023/10/27 01:56:55.000.834,=F:\Microlins\Projetos\Delphi\Alpha\Unit1.pas</Transaction>
+    <Transaction>2023/10/27 02:03:46.000.237,F:\Microlins\Projetos\Delphi\Alpha\Unit1.pas=F:\Microlins\Projetos\Delphi\Alpha\DAO\uEscolaDAO.pas</Transaction>
+    <Transaction>2023/10/27 02:03:52.000.800,=F:\Microlins\Projetos\Delphi\Alpha\Unit1.pas</Transaction>
+    <Transaction>2023/10/27 02:07:02.000.830,F:\Microlins\Projetos\Delphi\Alpha\Unit1.pas=F:\Microlins\Projetos\Delphi\Alpha\Model\uEscolaModel.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="Controller"/>
     <File Path="Controller\uEmpresaController.pas"/>
     <File Path="Controller\uIEmpresaController.pas"/>
+    <File Path="Controller\uIFilialController.pas"/>
+    <File Path="Controller\uFilialController.pas"/>
     <File Path="DAO"/>
     <File Path="DAO\uConexaoMySQL.pas"/>
     <File Path="DAO\uEmpresaDAO.pas"/>
+    <File Path="DAO\uFilialDAO.pas"/>
+    <File Path="DAO\uEscolaDAO.pas"/>
     <File Path="Model"/>
     <File Path="Model\uEmpresaModel.pas"/>
+    <File Path="Model\uFilialModel.pas"/>
+    <File Path="Model\uEscolaModel.pas"/>
+    <File Path="Shared"/>
+    <File Path="Shared\uUtilitarios.pas"/>
     <File Path="View"/>
     <File Path="View\uPrincipalView.pas"/>
     <File Path="View\uPrincipalView.dfm"/>
+    <File Path="View\uFilialViewCons.pas"/>
+    <File Path="View\uFilialViewCons.dfm"/>
+    <File Path="View\uFilialViewAdd.pas"/>
+    <File Path="View\uFilialViewAdd.dfm"/>
   </ProjectSortOrder>
 </BorlandProject>

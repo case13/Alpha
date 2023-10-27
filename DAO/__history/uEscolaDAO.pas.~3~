@@ -1,0 +1,237 @@
+unit uEscolaDAO;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.Buttons,
+  FireDAC.Phys.FBDef, FireDAC.Phys.IBBase, FireDAC.Phys.FB, uConexaoMySQL, System.JSON,
+  Data.DBXJSON, REST.JSON, uEscolaModel;
+
+  type
+    TEscolaDAO = class
+      private
+        FConexao : TConexaoMySQL;
+      public
+        constructor Create;
+        function ConsultarEscolaLike(Model : TEscolaModel) : TJSONObject;
+        function ConsultarEscolaId(Id : Integer) : TJSONObject;
+        function Incluir(Model : TEscolaModel) : string;
+        function Alterar(Model : TEscolaModel) : string;
+        function GetStatus(Model : TEscolaModel) : String;
+        procedure PreencherParametros(Model:TEscolaModel; Query : TFDQuery);
+
+
+
+    end;
+
+implementation
+
+{ TFilialDAO }
+
+procedure PreencherParametros(Model:TEscolaModel; Query : TFDQuery);
+begin
+  with Query do
+   begin
+     if Model.Id = 0 then
+      begin
+         ParamByName('Descricao').AsString := Model.Descricao;
+         ParamByName('UF').AsString := Model.UF;
+         ParamByName('Cidade').AsString := Model.Cidade;
+         ParamByName('Bairro').AsString := Model.Bairro;
+         ParamByName('Endereco').AsString := Model.Endereco;
+         ParamByName('ComplementoEnd').AsString := Model.ComplementoEnd;
+         ParamByName('FilialId').AsInteger := Model.FilialId;
+      end
+     else
+      begin
+         ParamByName('Descricao').AsString := Model.Descricao;
+         ParamByName('UF').AsString := Model.UF;
+         ParamByName('Cidade').AsString := Model.Cidade;
+         ParamByName('Bairro').AsString := Model.Bairro;
+         ParamByName('Endereco').AsString := Model.Endereco;
+         ParamByName('ComplementoEnd').AsString := Model.ComplementoEnd;
+         ParamByName('FilialId').AsInteger := Model.FilialId;
+         ParamByName('Id').AsInteger := Model.Id;
+      end;
+   end;
+end;
+
+
+function TEscolaDAO.GetStatus(Model : TEscolaModel) : String;
+var Query : TFDQuery;
+begin
+ try
+  try
+     Query := FConexao.criarQuery;
+     with Query do
+      begin
+        Sql.Add('select FilialStatus from Filial');
+        Sql.Add('where Id = :Id');
+         Params[0].AsInteger := Model.Id;
+        Open;
+         result := FieldByName('FilialStatus').AsString;
+      end;
+  finally
+    Query.Free;
+  end;
+ except
+    Query.Free;
+ end;
+end;
+
+function TEscolaDAO.Incluir(Model: TEscolaModel): string;
+var
+  Query : TFDQuery;
+begin
+  try
+    Query := FConexao.criarQuery;
+     try
+       With Query do
+        begin
+         SQL.Add('insert into Filial');
+         SQL.Add('(CNPJ, Descricao, UF, Cidade, Bairro, Endereco, ComplementoEnd, FilialStatus, EmpresaId)');
+         SQL.Add('values');
+         SQL.Add('(:CNPJ, :Descricao, :UF, :Cidade, :Bairro, :Endereco, :ComplementoEnd, :FilialStatus, :EmpresaId)');
+          PreencherParametros(Model,Query);
+         ExecSQL;
+        end;
+        result := 'Incluido';
+     except
+       result := 'Falha ao tentar INCLUIR novo registro!';
+       Query.Free;
+     end;
+  finally
+    Query.Free;
+  end;
+end;
+
+
+function TEscolaDAO.Alterar(Model: TEscolaModel): string;
+var
+ Query : TFDQuery;
+ begin
+ try
+   Query := FConexao.criarQuery;
+    try
+      with Query do
+       begin
+         SQL.Add('update Filial');
+         sql.Add('set CNPJ = :CNPJ, Descricao = :Descricao, UF = :UF, Cidade = :Cidade, Bairro = :Bairro, Endereco = :Endereco,');
+         Sql.Add('ComplementoEnd = :ComplementoEnd, FilialStatus = :FilialStatus, EmpresaId = :EmpresaId');
+         sql.Add('where Id = :Id');
+          PreencherParametros(Model,Query);
+         ExecSQL;
+       end;
+       result := 'Editado';
+    except
+      result := 'Falha ao tentar ALTERAR o registro!';
+      Query.Free;
+    end;
+ finally
+   Query.Free;
+ end;
+end;
+
+function TEscolaDAO.ConsultarEscolaId(Id: Integer): TJSONObject;
+var Query : TFDQuery;
+begin
+  Query := TFDQuery.Create(nil);
+  try
+    Query := FConexao.criarQuery;
+    Query.SQL.Text := 'SELECT * FROM Filial WHERE Id = :Id';
+    Query.ParamByName('Id').AsInteger := Id;
+    Query.Open;
+
+     if not Query.IsEmpty then
+      begin
+        Result := TJSONObject.Create;
+        Result.AddPair('Id', Query.FieldByName('Id').AsString);
+        Result.AddPair('CNPJ', Query.FieldByName('CNPJ').AsString);
+        Result.AddPair('Descricao', Query.FieldByName('Descricao').AsString);
+        Result.AddPair('UF', Query.FieldByName('UF').AsString);
+        Result.AddPair('Cidade', Query.FieldByName('Cidade').AsString);
+        Result.AddPair('Bairro', Query.FieldByName('Bairro').AsString);
+        Result.AddPair('Endereco', Query.FieldByName('Endereco').AsString);
+        Result.AddPair('ComplementoEnd', Query.FieldByName('ComplementoEnd').AsString);
+        Result.AddPair('FilialStatus', Query.FieldByName('FilialStatus').AsString);
+        Result.AddPair('EmpresaId', Query.FieldByName('EmpresaId').AsString);
+      end
+    else
+     begin
+        Result := TJSONObject.Create;
+     end;
+  finally
+    Query.Free;
+  end;
+end;
+
+function TEscolaDAO.ConsultarEscolaLike(Model : TEscolaModel): TJSONObject;
+var
+ Query : TFDQuery;
+ JSONArr: TJSONArray;
+ JSONObj: TJSONObject;
+begin
+  try
+    JSONArr := TJSONArray.Create;
+    Result := TJSONObject.Create;
+    Query := FConexao.criarQuery;
+
+    var vCampo := Model.Campo;
+    var vFiltro := Model.Filtro;
+    var vOrdem := Model.Ordem;
+
+    if vCampo = '' then
+      vCampo := 'Id';
+
+    if vOrdem = '' then
+      vOrdem := 'Asc';
+
+
+    With Query do
+     begin
+       SQL.Add('select * from Filial');
+       SQL.Add('where ' + vCampo + ' like ''%' + vFiltro + '%''');
+       SQL.Add('Order by ' + vCampo + ' ' + vOrdem);
+       Open;
+       JSONArr := TJSONArray.Create;
+        while not EOF do
+         begin
+            JSONObj := TJSONObject.Create;
+            JSONObj.AddPair('Id', FieldByName('Id').AsString);
+            JSONObj.AddPair('CNPJ', FieldByName('CNPJ').AsString);
+            JSONObj.AddPair('Descricao', FieldByName('Descricao').AsString);
+            JSONObj.AddPair('UF', FieldByName('UF').AsString);
+            JSONObj.AddPair('Cidade', FieldByName('Cidade').AsString);
+            JSONObj.AddPair('Bairro', FieldByName('Bairro').AsString);
+            JSONObj.AddPair('Endereco', FieldByName('Endereco').AsString);
+            JSONObj.AddPair('ComplementoEnd', FieldByName('ComplementoEnd').AsString);
+            JSONObj.AddPair('FilialStatus', FieldByName('FilialStatus').AsString);
+            JSONObj.AddPair('EmpresaId', FieldByName('EmpresaId').AsString);
+            JSONArr.AddElement(JSONObj);
+           Next;
+         end;
+
+      if JSONArr.Count > 0 then
+        Result.AddPair('Filiais', JSONArr)
+      else
+        Result.AddPair('Filiais', TJSONArray.Create); // Retorna um JSON vazio
+
+     end;
+  finally
+    Query.Free;
+  end;
+end;
+
+constructor TEscolaDAO.Create;
+begin
+   FConexao := TConexaoMySQL.Create;
+end;
+
+
+
+end.

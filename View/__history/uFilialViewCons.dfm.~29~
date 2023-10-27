@@ -1,0 +1,416 @@
+object fFilialViewCons: TfFilialViewCons
+  Left = 0
+  Top = 0
+  Caption = 'fFilialViewCons'
+  ClientHeight = 549
+  ClientWidth = 1477
+  Color = 4194304
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Square721 BT'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 14
+  object Panel1: TPanel
+    AlignWithMargins = True
+    Left = 3
+    Top = 3
+    Width = 1471
+    Height = 543
+    Align = alClient
+    BevelOuter = bvNone
+    Color = 15461355
+    ParentBackground = False
+    TabOrder = 0
+    object Panel2: TPanel
+      Left = 0
+      Top = 0
+      Width = 1471
+      Height = 49
+      Align = alTop
+      BevelOuter = bvNone
+      TabOrder = 0
+      object spdCadastrar: TSpeedButton
+        AlignWithMargins = True
+        Left = 3
+        Top = 3
+        Width = 49
+        Height = 43
+        Hint = 'Novo Registro'
+        Margins.Right = 0
+        Align = alLeft
+        Glyph.Data = {
+          36030000424D3603000000000000360000002800000010000000100000000100
+          18000000000000030000C40E0000C40E00000000000000000000F8F8F8C6C6C6
+          C5C5C5C5C5C5C5C5C5C5C5C5C5C5C5C5C5C5CACACAFAFAFAFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFC6C6C6F7F7F6F9F9F9FBFBFBFBFBFBFCFCFCFDFDFDFF
+          FFFFEAE9E99D9D9AF5F5F5FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC5C5C5F7F7F6
+          F8F8F8FAFAFAFBFBFBFCFCFCFDFDFDFEFEFEF4F4F4CCCCCC979793EDEDEDFFFF
+          FFFFFFFFFFFFFFFFFFFFC5C5C5F6F6F6F8F8F8FAFAFAFBFBFBFCFCFCFDFDFDFE
+          FEFEFBFBFBC4C4C4FDFDFD999995F5F5F5FFFFFFFFFFFFFFFFFFC5C5C5F6F6F5
+          F7F7F7FAFAFAFBFBFBFCFCFCFDFDFDFEFEFEFEFEFEE0E0E0C6C6C6CFCFCEA2A1
+          9FFAFAFAFFFFFFFFFFFFC5C5C5F5F5F4F6F6F6F9F9F9FAFAFAFBFBFBFCFCFCFD
+          FDFDFEFEFEFEFEFEFCFCFCFAFAFAF0EFEFCACACAFFFFFFFFFFFFC5C5C5F4F4F4
+          F5F5F5F7F7F7FAFAFAFAFAFAFBFBFBFCFCFCFDFDFDFDFDFDFEFEFEFEFEFEFEFE
+          FEC5C5C5FFFFFFFFFFFFC5C5C5F4F4F3F4F4F3F6F6F6F8F8F8FAFAFAFBFBFBFB
+          FBFBFCFCFCFCFCFCFDFDFDFDFDFDFDFDFDC5C5C5FFFFFFFFFFFFC5C5C5F2F2F2
+          F2F2F2F4F4F4F6F6F6F8F8F8FAFAFAFAFAFAFBFBFBFBFBFBFCFCFCFCFCFCFCFC
+          FCC5C5C5FFFFFFFFFFFFC5C5C5F1F1F0F1F1F0F3F3F2F5F5F4F6F6F6F8F8F8F9
+          F9F9FAFAFAFAFAFA95DF9523C4230AAF0A1CBB1C99E399FFFFFFC5C5C5EFEFEE
+          EFEFEEF1F1F0F3F3F2F4F4F4F6F6F6F7F7F7F8F8F895DD9502AD0200A31AFFFF
+          FF00B03602AE0599E099C5C5C5EEEEEDEDEDEDEFEFEEF1F1F0F2F2F2F4F4F3F5
+          F5F5F6F6F621B42100A00300A034FFFFFF00B06400AF3223B423C5C5C5ECECEB
+          ECECEBEDEDECEFEFEEF0F0EFF1F1F1F2F2F2F3F3F3099509FFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFF099709C5C5C5EAE9E8E9E9E8EBEBEAEDEDECEEEEEDEFEFEEF0
+          F0EFF1F1F021A6211DB61D29B43FFFFFFF29BC5A1DBC3323A923C5C5C5EAEAEA
+          E9E9E8EBEBEAEDEDECEEEEEDEFEFEEF0F0EFF1F1F08FCF8F36BF3678D578FFFF
+          FF78D57A37C03798D798EFEFEFC5C5C5C5C5C5C5C5C5C5C5C5C5C5C5C5C5C5C5
+          C5C5C5C5C5C5C5C577B5773DB03D5FC45F42B44297D897FFFFFF}
+        ParentShowHint = False
+        ShowHint = True
+        OnClick = spdCadastrarClick
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitHeight = 49
+      end
+      object spdAlterar: TSpeedButton
+        AlignWithMargins = True
+        Left = 52
+        Top = 3
+        Width = 49
+        Height = 43
+        Hint = 'Alterar Registro'
+        Margins.Left = 0
+        Margins.Right = 0
+        Align = alLeft
+        Glyph.Data = {
+          36030000424D3603000000000000360000002800000010000000100000000100
+          18000000000000030000C40E0000C40E00000000000000000000FFFFFFFEFEFE
+          C1C1C1ADACACADADADADADADADADADADADADADADADADADADADADADB5B5B5D1D1
+          D1F0F0F0FFFFFFFFFFFFFFFFFFFDFDFDB4B3B3E9E7E7EAE9E8EBEAEAECEBEBED
+          ECEBEDECEBECEBEBE7E5E5DCDAD9CECCCCBDBDBDFEFEFEFFFFFFFFFFFFFDFDFD
+          B4B3B3EAE8E8EBEAE9E9E8E8EEEDECEFEEEDEFEEEDEEEDEDEDECECE6E4E4DAD8
+          D7A8A8A8FDFDFDFFFFFFFFFFFFFDFDFDB4B4B3EBE9E9ECEAEA93A0A89A9A9AD4
+          D3D3EEEEEDEFEEEEEEEDEDEDECEBE5E4E3ABABAAFDFDFDFFFFFFFFFFFFFDFDFD
+          B4B4B4ECEBEAEEEDECD4D4D44644436E6D6DACACABE2E2E1EFEEEDEEEDECECEB
+          EAB3B3B2FDFDFDFFFFFFFFFFFFFDFDFDB4B4B4ECEBEAEEEDECEFEFEED2D2D148
+          47468F8E8DA1A0A0C5C5C4E9E8E8ECEBEBB4B4B4FDFDFDFFFFFFFFFFFFFDFDFD
+          B4B4B4ECEBEAEEEDECF0EFEEF1F0F0D3D3D24B4A4AB7B6B6C5C4C4BAB9B8DDDD
+          DCB4B4B4FDFDFDFFFFFFFFFFFFFDFDFDB4B4B3EBEAE9EDEDECEFEFEEF1F1F0F3
+          F2F1D4D3D34A4A4ABEBEBDE7E6E5DCDBDAB1B1B0FDFDFDFFFFFFFFFFFFFDFDFD
+          B4B3B2EAE9E8ECEBEAEEEEEDF0F0EFF2F1F1F2F1F1D2D1D14A4A4ABCBBBBEAE9
+          E8B4B3B2FDFDFDFFFFFFFFFFFFFDFDFDB2B1B1E7E6E5EAE9E8ECEBEAEEEDECEF
+          EEEDEFEEEDEEEDECCECDCD494949B8B7B6B2B1B1FDFDFDFFFFFFFFFFFFFDFDFD
+          B0AFAFE4E2E1E6E5E4E9E8E7EAE9E9EBEAEAEBEAEAEAE9E9E9E8E7C9C8C74848
+          48919191FDFDFDFFFFFFFFFFFFFDFDFDAEADADDFDEDCE2E1E0E4E3E2E6E5E4E7
+          E6E5E7E6E5E6E5E4E5E3E2E2E1E0C3C2C1454444C7C7C7FFFFFFFFFFFFFDFDFD
+          ACABAAD9D7D5DDDCDAE0DEDDE1E0DEE2E1DFE2E1DFE1E0DEE0DEDDDDDCDAD9D8
+          D69F9E9D484848D1D1D1FFFFFFFDFDFDA9A8A7D2D0CED6D4D2D9D7D5DBD9D8DC
+          DAD9DCDAD9DBD9D8D9D7D5D6D4D2D2D0CEA9A9A7DDDDDDDEDEDEFFFFFFFDFDFD
+          A7A6A4CAC8C5CECBC9D0CECCD2D0CED4D2D0D4D2D0D3D1CFD1CFCCCECCC9CBC8
+          C5A7A6A4FDFDFDFFFFFFFFFFFFFFFFFFCCCCCCBBBBBABCBCBBBCBCBCBDBCBCBD
+          BDBCBDBDBCBDBCBCBCBCBCBCBCBBBBBBBACCCCCCFFFFFFFFFFFF}
+        ParentShowHint = False
+        ShowHint = True
+        ExplicitLeft = 139
+      end
+      object spdDeletar: TSpeedButton
+        AlignWithMargins = True
+        Left = 101
+        Top = 3
+        Width = 49
+        Height = 43
+        Hint = 'Deletar Registro'
+        Margins.Left = 0
+        Align = alLeft
+        Glyph.Data = {
+          36030000424D3603000000000000360000002800000010000000100000000100
+          18000000000000030000C40E0000C40E00000000000000000000FFFFFFE2E1FF
+          979BFFC2C1FEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF1F1
+          F7191BEF8786CAFFFFFFEDEAFF3B4CFF1538FF0D25FEADA6FCFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFF6765E40000FF807FC4FFFFFFC0BBFF1A39FF
+          2A4EFF203FFF1D2DFDE4E2FDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD8D8F00000
+          F70000EDEBEAEDFFFFFFC2BDFF4F66FF1F43FF2540FF0C25FE7778F8FFFFFFFF
+          FFFFFFFFFFFFFFFFF7F7F7231EEA0604FF0001C9FFFFFFFFFFFFFEFDFF534FFF
+          5073FF1E3BFF1E38FF0000FDE6E3FAFFFFFFFFFFFFFFFFFB3A35F10000FF0000
+          EEA4A3E4FFFFFFFFFFFFFFFFFFE6E4FF1923FF395AFF1832FF1328FF3A3BF7FF
+          FFFCFFFFFE716EF60000FE0A03FF1A16D3F2F1F5FFFFFFFFFFFFFFFFFFFFFFFF
+          AAA5FE4550FE2644FF1629FF0008FD8483F66F6DF80000FC0F08FF0000ECD7D6
+          EAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE635CFB475EFF1F36FF1521FF0B
+          0EF90706FE120FFF0000F9524FDCFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFF4541F7525DFD1722FF181DFF1514FF0807FF3B38E0FEFEFBFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8A86FB1B27FD1620FF12
+          17FF1312FF0000EEF1F2F4FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          C5C5FF5963FF5D79FF667BFF5E69FF666CFF5C5CFF2D2AFF3C36EFEBEBFAFFFF
+          FFFFFFFFFFFFFFFFFFFFF9F6FF9499FF667FFF6C87FF677DFF5C6FFF7782FF6C
+          67F47873F5918FFF4B44FF534CF6ECECF3FFFFFFFFFFFFFFFFFF878CFF7A9AFF
+          7B95FF738AFF7086FF8897FE7E78F7F1F0FDD1CEF86E6AEE9692FC7972FF4947
+          F9A3A3F2FFFEFBFFFFFF8893FF88A8FF7892FF859BFF909AFE7F7CF9F3F2FDFF
+          FFFFFFFFFFEEEEFB908DED726DEC9C99FF7D82FD7F85F2DFDFF79792FFA3ACFF
+          A2ACFF9092FDAEA7FCFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEEECFA8583
+          E18886E9969EF1777DE2F8F7FFD7D3FFD8D5FFD9D7FEFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF2F1FAD5D3F1DDDCF3}
+        ParentShowHint = False
+        ShowHint = True
+        ExplicitLeft = 348
+      end
+      object Panel3: TPanel
+        AlignWithMargins = True
+        Left = 1012
+        Top = 3
+        Width = 456
+        Height = 43
+        Align = alRight
+        BevelOuter = bvNone
+        TabOrder = 0
+        object spdConsultar: TSpeedButton
+          AlignWithMargins = True
+          Left = 414
+          Top = 3
+          Width = 40
+          Height = 37
+          Hint = 'Deletar Registro'
+          Margins.Left = 0
+          Margins.Right = 2
+          Align = alRight
+          Glyph.Data = {
+            36030000424D3603000000000000360000002800000010000000100000000100
+            18000000000000030000120B0000120B00000000000000000000FF00FF314B62
+            AC7D7EFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+            FFFF00FFFF00FFFF00FF5084B20F6FE1325F8CB87E7AFF00FFFF00FFFF00FFFF
+            00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF32A0FE37A1FF
+            106FE2325F8BB67D79FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+            FFFF00FFFF00FFFF00FFFF00FF37A4FE379FFF0E6DDE355F89BB7F79FF00FFFF
+            00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+            37A4FE359EFF0F6FDE35608BA67B7FFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+            FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF38A5FE329DFF156DCE444F5BFF
+            00FF9C6B65AF887BAF887EAA8075FF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+            FF00FFFF00FF3BABFFA1CAE7AD8679A98373E0CFB1FFFFDAFFFFDDFCF8CFCCB2
+            9FA1746BFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFC0917DFC
+            E9ACFFFFCCFFFFCFFFFFD0FFFFDEFFFFFAE3D3D1996965FF00FFFF00FFFF00FF
+            FF00FFFF00FFFF00FFFF00FFB08978FAD192FEF4C2FFFFD0FFFFDAFFFFF6FFFF
+            FCFFFFFCB69384FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFB08978FEDA97ED
+            B478FBEEBBFFFFD3FFFFDCFFFFF4FFFFF4FFFFE2E9DDBCA67B73FF00FFFF00FF
+            FF00FFFF00FFFF00FFB18A78FFDE99E9A167F4D199FEFCCCFFFFD5FFFFDAFFFF
+            DCFFFFD7EFE6C5A97E75FF00FFFF00FFFF00FFFF00FFFF00FFAA7F73FAE0A4F0
+            B778EEBA7BF6DDA6FEFBCCFFFFD3FFFFD1FFFFD7D9C5A7A3756CFF00FFFF00FF
+            FF00FFFF00FFFF00FFFF00FFCEB293FFFEDDF4D1A5EEBA7BF2C78FF8E1ABFCF0
+            BAFCFACAA3776FFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFA1746BE1
+            D4D3FFFEEEF7CC8CF0B473F7C788FCE3A5C2A088A5776CFF00FFFF00FFFF00FF
+            FF00FFFF00FFFF00FFFF00FFFF00FF986865BA9587EAD7A4EAD59EE0C097A577
+            6CA5776CFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+            00FFFF00FFA77E70A98073A4786EFF00FFFF00FFFF00FFFF00FF}
+          ParentShowHint = False
+          ShowHint = True
+          OnClick = spdConsultarClick
+          ExplicitTop = 6
+        end
+        object edtBusca: TEdit
+          AlignWithMargins = True
+          Left = 3
+          Top = 5
+          Width = 411
+          Height = 33
+          Margins.Top = 5
+          Margins.Right = 0
+          Margins.Bottom = 5
+          Align = alClient
+          CharCase = ecUpperCase
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Square721 BT'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          ExplicitHeight = 28
+        end
+      end
+    end
+    object pnStatus: TPanel
+      Left = 0
+      Top = 512
+      Width = 1471
+      Height = 31
+      Align = alBottom
+      BevelOuter = bvNone
+      Color = 4194304
+      ParentBackground = False
+      TabOrder = 1
+      object Label1: TLabel
+        AlignWithMargins = True
+        Left = 3
+        Top = 3
+        Width = 750
+        Height = 25
+        Align = alLeft
+        Alignment = taCenter
+        Caption = 
+          'Press. [ Enter - Pesquisar ] - [ Ctrl + N - Novo Registro ] - [ ' +
+          'Ctrl + E - Editar Registro ] - [ Delete - Apagar Registro ] - [ ' +
+          'Esc - Voltar Tela ]'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'Square721 BT'
+        Font.Style = []
+        ParentFont = False
+        Layout = tlCenter
+        ExplicitHeight = 14
+      end
+    end
+    object GroupBox1: TGroupBox
+      AlignWithMargins = True
+      Left = 3
+      Top = 52
+      Width = 1465
+      Height = 457
+      Align = alClient
+      Caption = 'Resultado'
+      TabOrder = 2
+      object DBGrid1: TDBGrid
+        AlignWithMargins = True
+        Left = 5
+        Top = 19
+        Width = 1455
+        Height = 433
+        Align = alClient
+        BorderStyle = bsNone
+        DataSource = DataSource1
+        DrawingStyle = gdsGradient
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+        TabOrder = 0
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Square721 BT'
+        TitleFont.Style = []
+        OnTitleClick = DBGrid1TitleClick
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'Id'
+            Width = 40
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CNPJ'
+            Width = 160
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'Descricao'
+            Width = 381
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'UF'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'Cidade'
+            Width = 281
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'Bairro'
+            Width = 256
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'Endereco'
+            Title.Caption = 'Endere'#231'o'
+            Width = 300
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'ComplementoEnd'
+            Title.Caption = 'Complemento do Endere'#231'o'
+            Width = 300
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'FilialStatus'
+            Title.Caption = 'Status'
+            Width = 146
+            Visible = True
+          end>
+      end
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = ClientDataSet1
+    Left = 486
+    Top = 231
+  end
+  object ClientDataSet1: TClientDataSet
+    PersistDataPacket.Data = {
+      1C0100009619E0BD01000000180000000A0000000000030000001C0102496404
+      0001000000000004434E504A0100490000000100055749445448020002003200
+      0944657363726963616F010049000000010005574944544802000200C8000255
+      4601004900000001000557494454480200020002000643696461646501004900
+      000001000557494454480200020064000642616972726F010049000000010005
+      574944544802000200640008456E64657265636F010049000000010005574944
+      544802000200C8000E436F6D706C656D656E746F456E64010049000000010005
+      574944544802000200C8000C46696C69616C5374617475730100490000000100
+      055749445448020002001E0009456D7072657361496404000100000000000000}
+    Active = True
+    Aggregates = <>
+    Params = <>
+    Left = 398
+    Top = 303
+    object ClientDataSet1Id: TIntegerField
+      FieldName = 'Id'
+    end
+    object ClientDataSet1CNPJ: TStringField
+      FieldName = 'CNPJ'
+      EditMask = '99.999.999/9999-99;0; '
+      Size = 50
+    end
+    object ClientDataSet1Descricao: TStringField
+      FieldName = 'Descricao'
+      Size = 200
+    end
+    object ClientDataSet1UF: TStringField
+      FieldName = 'UF'
+      Size = 2
+    end
+    object ClientDataSet1Cidade: TStringField
+      FieldName = 'Cidade'
+      Size = 100
+    end
+    object ClientDataSet1Bairro: TStringField
+      FieldName = 'Bairro'
+      Size = 100
+    end
+    object ClientDataSet1Endereco: TStringField
+      FieldName = 'Endereco'
+      Size = 200
+    end
+    object ClientDataSet1ComplementoEnd: TStringField
+      FieldName = 'ComplementoEnd'
+      Size = 200
+    end
+    object ClientDataSet1FilialStatus: TStringField
+      FieldName = 'FilialStatus'
+      Size = 30
+    end
+    object ClientDataSet1EmpresaId: TIntegerField
+      FieldName = 'EmpresaId'
+    end
+  end
+end

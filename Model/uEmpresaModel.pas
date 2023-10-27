@@ -15,7 +15,6 @@ type
 
    TEmpresaModel = class
      private
-       FId : integer;
        FCNPJ : string;
        FRazaoSocial : string;
        FNomeFantasia : string;
@@ -23,8 +22,11 @@ type
        FRodape : string;
        FEmpresaStatus : string;
 
+       class var
+        FId : integer;
+      class function GetId: integer; static;
+      class procedure SetId(const value : integer); static;
      public
-       property Id: integer read FId write FId;
        property CNPJ: string read FCNPJ write FCNPJ;
        property RazaoSocial: string read FRazaoSocial write FRazaoSocial;
        property NomeFantasia: string read FNomeFantasia write FNomeFantasia;
@@ -32,8 +34,8 @@ type
        property Rodape: string read FRodape write FRodape;
        property EmpresaStatus: string read FEmpresaStatus write FEmpresaStatus;
 
-
-
+       // Propriedades Estáticas
+       class property Id: integer read GetId write SetId;
 
        function IncluirEmpresaJSON(EmpresaJSON: TJSONObject): string;
        function AlterarEmpresaJSON(EmpresaJSON: TJSONObject): string;
@@ -49,6 +51,15 @@ implementation
 
 { TEmpresaModel }
 
+class function TEmpresaModel.GetId: integer;
+begin
+  result := FId;
+end;
+
+class procedure TEmpresaModel.SetId(const value: integer);
+begin
+  FId := value;
+end;
 
 function TEmpresaModel.ValidarCampos(EmpresaJSON: TJSONObject): string;
 begin
@@ -69,8 +80,6 @@ begin
 
   result := '';
 end;
-
-
 
 function TEmpresaModel.AlterarEmpresaJSON(EmpresaJSON: TJSONObject): string;
 var
@@ -103,6 +112,7 @@ begin
   var DAO := TEmpresaDAO.Create(nil);
   result := DAO.ConsultarEmpresaLikeJSON(filtro);
 end;
+
 
 function TEmpresaModel.ConsultarEmpresaIdJSON(Id: Integer): TJSONObject;
 begin
